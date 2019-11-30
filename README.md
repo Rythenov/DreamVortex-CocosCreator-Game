@@ -23,7 +23,7 @@ android app
 
 ![Image text](https://github.com/Rythenov/DreamVortex-CocosCreator-Game/blob/master/Resource/ApkQR.png)
 
-百度云：https://pan.baidu.com/s/1UYnEhvbNK-5H1RmHilAePg 
+百度云微信扫一扫：https://pan.baidu.com/s/1UYnEhvbNK-5H1RmHilAePg 
 
 ![Image text](https://github.com/Rythenov/DreamVortex-CocosCreator-Game/blob/master/Resource/ApkBaiduNetDiskQR.png)
 
