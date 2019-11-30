@@ -140,6 +140,7 @@ cc.Class({
         Global.PLAYER_MAXHP = 10;
         Global.PLAYER_MAXMP = 1;
         //转场
+        cc.director.loadScene("Main");
     },
     start () {
 
