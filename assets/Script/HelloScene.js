@@ -68,6 +68,8 @@ cc.Class({
     onSignInButtonClicked : function(){
         cc.log('sign in btn clicked');
         //checkpassword
+        //load user info
+        //检查是否有角色
         if (1) {
             //转场
             Global.USER_NAME = 'aaa';

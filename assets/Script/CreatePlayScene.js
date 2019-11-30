@@ -15,6 +15,7 @@ cc.Class({
         m_playerPic : cc.Sprite,
         m_playerInfo : cc.Sprite,
         m_PlayerInfoRichText : cc.RichText,
+        m_editBox : cc.EditBox,
         m_leftButton : cc.Button,
         m_rightButton : cc.Button,
         m_allPlayerPicsVec: {
@@ -23,6 +24,7 @@ cc.Class({
         },
         m_json : cc.JsonAsset,
         m_PlayerInfoStrVec : [],
+        m_JobVec : [],
         m_playerPicBeginPos : cc.v2(-1300, 0),
         m_playerPicEndPos : cc.v2(-500, 0),
         m_playerInfoBeginPos : cc.v2(1400, 260),
@@ -51,6 +53,8 @@ cc.Class({
         {
             var str = playerJsonVec[i].Describe;
             this.m_PlayerInfoStrVec.push(str);
+            var job = playerJsonVec[i].Job;
+            this.m_JobVec.push(job);
         }
         cc.log(this.m_PlayerInfoStrVec);
         //初始化info
@@ -125,6 +129,18 @@ cc.Class({
         this.m_leftButton.interactable = isEnable;
     },
 
+    onOKButtonClicked : function(){
+        //检查是否有名字
+        //检查名字格式
+        //检查数据库内是否有相同名称
+        //存储
+        Global.PLAYER_NAME  = this.m_editBox.string;
+        Global.PLAYER_JOB = this.m_JobVec[this.m_currentPlayerPicIndex];
+        Global.PLAYER_LV = 1;
+        Global.PLAYER_MAXHP = 10;
+        Global.PLAYER_MAXMP = 1;
+        //转场
+    },
     start () {
 
     },

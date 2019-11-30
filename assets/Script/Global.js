@@ -9,6 +9,16 @@
 //  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
 window.Global = {
-    USER_NAME: null,
-    USER_PASSWORD: null,
+    USER_EMAIL : null,
+    USER_PASSWORD : null,
+
+    PLAYER_NAME : null,
+    PLAYER_JOB : null,
+    PLAYER_LV : null,
+    PLAYER_MAXHP : null,
+    PLAYER_MAXMP : null,
+    PLAYER_CARDSTACK : null,
+    PLAYER_CARDGROUP : null,
+    PLAYER_CURRENT_CARDGROUP : null,
+    PLAYER_GOLD : null,
 };

@@ -640,7 +640,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "showInEditor": false,
-    "_id": "b09SstcfBE5KDrGbfZZPP6"
+    "_id": "adJjsTdSNGyo0rJ5vhHa4m"
   },
   {
     "__type__": "cc.Label",
@@ -672,7 +672,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "5dAw4lzrVJiYUjCYF1KFj5"
+    "_id": "4fjT7EBQdGErzcr6Sa/v8d"
   },
   {
     "__type__": "cc.PrivateNode",
@@ -735,7 +735,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "showInEditor": false,
-    "_id": "77AdxEJ4RLXLH+d9v6z37u"
+    "_id": "35iBx+2FlCF6ia2DIZtCtf"
   },
   {
     "__type__": "cc.Label",
@@ -767,7 +767,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "6dPxB31fdJ46QY11oTKEhB"
+    "_id": "012dWQCFxOV4tM5grrj5tN"
   },
   {
     "__type__": "cc.PrivateNode",
@@ -830,7 +830,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "showInEditor": false,
-    "_id": "1fRGU8txpNt4+X36t+FXIj"
+    "_id": "f81+cHTrhOAILKIe1hJbTj"
   },
   {
     "__type__": "cc.Label",
@@ -862,7 +862,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "93QujV4hVPkqO6KPjieQdt"
+    "_id": "28mzr37MpEwoS5EmM5dwVX"
   },
   {
     "__type__": "cc.PrivateNode",
@@ -925,7 +925,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "showInEditor": false,
-    "_id": "8683duin1MFLOb26I8Eudj"
+    "_id": "8bB8rg9zRA+pBBRZ1vzBDt"
   },
   {
     "__type__": "cc.Label",
@@ -957,7 +957,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "bcCyZZGSlGLKvI135pi9fy"
+    "_id": "b3PK62IV1H1qmYb9wsDeGb"
   },
   {
     "__type__": "cc.PrivateNode",
@@ -1020,7 +1020,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "showInEditor": false,
-    "_id": "ccNrOwkQpKfrzEtqpfngZY"
+    "_id": "28HeRU9y9EOa2CLYcEpMxS"
   },
   {
     "__type__": "cc.Label",
@@ -1052,7 +1052,7 @@
     "_N$fontFamily": "Arial",
     "_N$overflow": 0,
     "_N$cacheMode": 0,
-    "_id": "63LdpnLvxFVJQ3T1iBdfPA"
+    "_id": "8alIgGRj1J0omQz/yuUFgT"
   },
   {
     "__type__": "cc.RichText",
@@ -1957,10 +1957,12 @@
   },
   {
     "__type__": "cc.ClickEvent",
-    "target": null,
+    "target": {
+      "__id__": 2
+    },
     "component": "",
-    "_componentId": "bf04adM4lFBGphy1AIWKES6",
-    "handler": "onSignInButtonClicked",
+    "_componentId": "cf661m2gkdPnos5ufvBV0TJ",
+    "handler": "onOKButtonClicked",
     "customEventData": ""
   },
   {
@@ -2565,6 +2567,9 @@
     "m_PlayerInfoRichText": {
       "__id__": 21
     },
+    "m_editBox": {
+      "__id__": 33
+    },
     "m_leftButton": {
       "__id__": 46
     },
@@ -2592,6 +2597,7 @@
       "__uuid__": "8c9103da-fe10-4bdb-8013-a34c2122cf58"
     },
     "m_PlayerInfoStrVec": [],
+    "m_JobVec": [],
     "m_playerPicBeginPos": {
       "__type__": "cc.Vec2",
       "x": -1300,
