@@ -16,6 +16,7 @@ cc.Class({
         m_title : cc.Label,
         m_startBtn : cc.Button,
         m_signInBox : cc.Node,
+        m_loadingLabel : cc.Label,
         m_loadTime : 2,
         m_backgroundLoadStartOpacity : 0,
         m_backgroundLoadStartScale: 2,
@@ -25,11 +26,17 @@ cc.Class({
         m_StartButtonEndV2 : cc.v2(0, -250),
         m_SignInBoxBeginV2 : cc.v2(0, -860),
         m_SignInBoxEndV2 : cc.v2(0, -250),
+        m_loadingLabelBeginV2 : cc.v2(0, 800),
+        m_loadingLabelEndV2 : cc.v2(0, 0)
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad:function () {
+         //预加载界面
+         cc.director.preloadScene("CreatePlayer", function () {
+            cc.log("Next scene preloaded");
+        });
         //主界面渐显与缩放
         this.m_background.node.opacity = this.m_backgroundLoadStartOpacity;
         this.m_background.node.scale = this.m_backgroundLoadStartScale;
@@ -40,7 +47,8 @@ cc.Class({
             , cc.callFunc(this.backgroundLoadFinished
                 , this)); 
         this.m_background.node.runAction(loadSequence);  
-
+        //设置loading
+        this.m_loadingLabel.node.setPosition(this.m_loadingLabelBeginV2);
         //设置标题与start按钮
         this.m_title.node.setPosition(this.m_titleBeginV2);
         var move2Act = cc.moveTo(this.m_loadTime / 2, this.m_titleEndV2);
@@ -67,6 +75,15 @@ cc.Class({
 
     onSignInButtonClicked : function(){
         cc.log('sign in btn clicked');
+        //移除所有控件添加loading
+        var loadingLabelMove2Act = cc.moveTo(this.m_loadTime / 4, this.m_loadingLabelEndV2);
+        this.m_loadingLabel.node.runAction(loadingLabelMove2Act);
+
+        var signInBoxMove2Act = cc.moveTo(this.m_loadTime / 4, this.m_SignInBoxBeginV2);
+        this.m_signInBox.runAction(signInBoxMove2Act);
+
+        var titleMove2Act = cc.moveTo(this.m_loadTime / 2, this.m_titleBeginV2);
+        this.m_title.node.runAction(titleMove2Act);
         //checkpassword
         //load user info
         //检查是否有角色
@@ -79,7 +96,6 @@ cc.Class({
     },
 
     start () {
-        
     },
 
     // update (dt) {},
