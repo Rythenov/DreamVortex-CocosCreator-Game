@@ -72,7 +72,7 @@ cc.Class({
             //转场
             Global.USER_NAME = 'aaa';
             cc.log(Global.USER_NAME);
-            cc.director.loadScene("Main");
+            cc.director.loadScene("CreatePlayer");
         }
     },
 
