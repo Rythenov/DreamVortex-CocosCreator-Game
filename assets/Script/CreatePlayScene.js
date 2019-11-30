@@ -14,13 +14,15 @@ cc.Class({
     properties: {
         m_playerPic : cc.Sprite,
         m_playerInfo : cc.Sprite,
+        m_PlayerInfoRichText : cc.RichText,
         m_leftButton : cc.Button,
         m_rightButton : cc.Button,
         m_allPlayerPicsVec: {
             type: cc.Texture2D,
             default: []
         },
-        m_text : cc.TextAsset,
+        m_json : cc.JsonAsset,
+        m_PlayerInfoStrVec : [],
         m_playerPicBeginPos : cc.v2(-1300, 0),
         m_playerPicEndPos : cc.v2(-500, 0),
         m_playerInfoBeginPos : cc.v2(1400, 260),
@@ -42,6 +44,17 @@ cc.Class({
         this.m_playerInfo.node.setPosition(this.m_playerInfoBeginPos);
         var playerInfoMoveAct = cc.moveTo(this.m_loadTime / 2, this.m_playerInfoEndPos);
         this.m_playerInfo.node.runAction(playerInfoMoveAct);
+        //初始化json数据
+        var json = this.m_json.json;
+        var playerJsonVec = json.player;
+        for(let i = 0; i < playerJsonVec.length; i++)
+        {
+            var str = playerJsonVec[i].Describe;
+            this.m_PlayerInfoStrVec.push(str);
+        }
+        cc.log(this.m_PlayerInfoStrVec);
+        //初始化info
+        this.m_PlayerInfoRichText.string = this.m_PlayerInfoStrVec[this.m_currentPlayerPicIndex];
     },
 
     onLeftButtonClicked : function() {
@@ -70,6 +83,14 @@ cc.Class({
            , openPlayerMoveAct
            , cc.callFunc(this.leftRightButtonEnable, this, true));
        this.m_playerPic.node.runAction(changPlayerSequence);
+
+       //操作简介板
+       var closePlayerInfoMoveAct = cc.moveTo(this.m_loadTime / 2, this.m_playerInfoBeginPos);
+       var openPlayerInfoMoveAct = cc.moveTo(this.m_loadTime / 2, this.m_playerInfoEndPos);
+       var changePlayerInfoSequence = cc.sequence(closePlayerInfoMoveAct
+            , cc.callFunc(this.changeInfo, this)
+            , openPlayerInfoMoveAct);
+        this.m_playerInfo.node.runAction(changePlayerInfoSequence);
     },
 
     getLeftPlayerPicIndex : function(currentIndex) {
@@ -92,6 +113,10 @@ cc.Class({
 
     changePic : function(){
         this.m_playerPic.spriteFrame = new cc.SpriteFrame(this.m_allPlayerPicsVec[this.m_currentPlayerPicIndex]);
+    },
+
+    changeInfo : function(){
+        this.m_PlayerInfoRichText.string = this.m_PlayerInfoStrVec[this.m_currentPlayerPicIndex];
     },
 
     leftRightButtonEnable : function(target, isEnable){
