@@ -1,1 +1,16 @@
-{"player":[{"Job":"00","Describe":"<p>Job：XXXXX00<br />Skill：XXXXXX<br />Describe：XXXXXXXXXXXXXXXXXXXXXXXX</p>"},{"Job":"01","Describe":"<p>Job：XXXXX01<br />Skill：XXXXXX<br />Describe：XXXXXXXXXXXXXXXXXXXXXXXX</p>"},{"Job":"02","Describe":"<p>Job：XXXXX02<br />Skill：XXXXXX<br />Describe：XXXXXXXXXXXXXXXXXXXXXXXX</p>"}]}
+{
+    "player": [
+        {
+            "Job": "00",
+            "Describe": "<p>Job：XXXXX00<br />Skill：XXXXXX<br />Describe：XXXXXXXXXXXXXXXXXXXXXXXX</p>"
+        },
+        {
+            "Job": "01",
+            "Describe": "<p>Job：XXXXX01<br />Skill：XXXXXX<br />Describe：XXXXXXXXXXXXXXXXXXXXXXXX</p>"
+        },
+        {
+            "Job": "02",
+            "Describe": "<p>Job：XXXXX02<br />Skill：XXXXXX<br />Describe：XXXXXXXXXXXXXXXXXXXXXXXX</p>"
+        }
+    ]
+}
