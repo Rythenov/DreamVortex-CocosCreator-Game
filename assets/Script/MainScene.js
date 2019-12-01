@@ -12,12 +12,14 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+       m_playerJson : cc.JsonAsset,
        m_backgroundSprite : cc.Sprite,
        m_attackBtn : cc.Button,
        m_cardBtn : cc.Button,
        m_shopBtn : cc.Button,
        m_leftArrow : cc.Sprite,
        m_rightArrow : cc.Sprite,
+       m_HeadPortrait : cc.Sprite,
        m_mainRect : cc.Rect,
        m_backgroundMinX : 0,
        m_backgroundMaxX : 0,
@@ -34,6 +36,30 @@ cc.Class({
         //get main rect 这里是世界坐标：原点在左下角00
         this.m_mainRect = new cc.Rect();
         this.m_mainRect.size = this.node.getContentSize();
+        //动态加载头像
+        //先读取玩家信息与头像路径
+        var playerJob = Global.PLAYER_JOB;
+        var playerHeadPortraitUrl;//玩家对应职业的头像url
+        var json = this.m_playerJson.json;
+        var playerJsonVec = json.player;
+        for(let i = 0; i < playerJsonVec.length; i++)
+        {
+            if(playerJsonVec[i].Job == playerJob){
+                playerHeadPortraitUrl = playerJsonVec[i].HeadPortrait;
+                break;
+            }
+        }
+        //这里要先取self
+        var self = this;
+        cc.loader.loadRes(playerHeadPortraitUrl, cc.SpriteFrame, function(err, spFrame) {
+            if (err) {
+                cc.log(err.message || err);
+                return;
+            }
+            else{
+                self.m_HeadPortrait.spriteFrame = spFrame;
+            }
+        });
         
     },
 
