@@ -1,5 +1,7 @@
 # DreamVortex-CocosCreator
 
+请首先关注更新日志
+-------------------------------------------
 
 # 预览地址
 DreamVortex-release-signed-201911302308版本
