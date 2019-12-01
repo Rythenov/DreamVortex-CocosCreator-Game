@@ -1,0 +1,31 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "LeftArrowAnimation",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 2,
+  "sample": 1,
+  "speed": 2,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "5db8b902-3bad-4cd9-9f94-5e2830b9cfb5"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "d3592c82-f848-482c-9eec-9671d2673400"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

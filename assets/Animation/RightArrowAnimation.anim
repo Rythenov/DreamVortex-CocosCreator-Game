@@ -1,0 +1,31 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "RightArrowAnimation",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 2,
+  "sample": 1,
+  "speed": 2,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "b5f20786-0992-4bd8-8d5b-44d86e3ebdab"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "8267d5dc-dd0e-4a0f-85a2-4414996efd8a"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
