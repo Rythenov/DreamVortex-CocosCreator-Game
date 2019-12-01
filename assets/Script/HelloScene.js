@@ -37,6 +37,8 @@ cc.Class({
          cc.director.preloadScene("CreatePlayer", function () {
             cc.log("Next scene preloaded");
         });
+        //load res
+        Global.LOAD_ALL_RES();
         //主界面渐显与缩放
         this.m_background.node.opacity = this.m_backgroundLoadStartOpacity;
         this.m_background.node.scale = this.m_backgroundLoadStartScale;

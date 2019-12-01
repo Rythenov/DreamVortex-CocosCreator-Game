@@ -1,0 +1,29 @@
+{
+    "player": [
+        {
+            "Job": "Warrior",
+            "Describe": "<p> Job：Warrior <br /> Skill：Warrior <br /> Describe：WarriorWarriorWarrior </p>",
+            "HeadPortrait" : "/HeadPortrait/Warrior"
+        },
+        {
+            "Job": "Master",
+            "Describe": "<p> Job：Master <br /> Skill：Master <br /> Describe：MasterMasterMasterMaster </p>",
+            "HeadPortrait" : "/HeadPortrait/Master"
+        },
+        {
+            "Job": "Warlock",
+            "Describe": "<p> Job：Warlock <br /> Skill：Warlock <br /> Describe：WarlockWarlockWarlock </p>",
+            "HeadPortrait" : "/HeadPortrait/Warlock"
+        },
+        {
+            "Job": "Minister",
+            "Describe": "<p> Job：Minister <br /> Skill：Minister <br /> Describe：MinisterMinisterMinister </p>",
+            "HeadPortrait" : "/HeadPortrait/Minister"
+        },
+        {
+            "Job": "Summoner",
+            "Describe": "<p> Job：Summoner <br /> Skill：Summoner <br /> Describe：SummonerSummonerSummoner </p>",
+            "HeadPortrait" : "/HeadPortrait/Summoner"
+        }
+    ]
+}
