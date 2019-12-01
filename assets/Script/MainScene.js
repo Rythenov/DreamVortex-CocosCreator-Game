@@ -52,6 +52,7 @@ cc.Class({
         //加载角色名称
         this.m_PlayerNameLabel.string = " " + Global.PLAYER_NAME;
         //初始化经验条
+        //PS:此处素材有问题
         g_LVSliderBeginPos = cc.v2(0 - (this.m_LVSliderUnderSprite.node.width / 2 - this.m_LVSliderSprite.node.width / 2), 0);
         g_LVSliderEndPos = cc.v2(this.m_LVSliderUnderSprite.node.width / 2 - this.m_LVSliderSprite.node.width / 2, 0);
         this.m_LVSliderSprite.node.setPosition(g_LVSliderBeginPos);
