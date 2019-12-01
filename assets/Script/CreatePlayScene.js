@@ -18,6 +18,8 @@ cc.Class({
         m_editBox : cc.EditBox,
         m_leftButton : cc.Button,
         m_rightButton : cc.Button,
+        m_buttonAndLineEditBox : cc.Node,
+        m_loadingLabel : cc.Label,
         m_allPlayerPicsVec: {
             type: cc.Texture2D,
             default: []
@@ -29,6 +31,10 @@ cc.Class({
         m_playerPicEndPos : cc.v2(-500, 0),
         m_playerInfoBeginPos : cc.v2(1400, 260),
         m_playerInfoEndPos : cc.v2(480, 260),
+        m_buttonAndLineEditBoxBeginPos : cc.v2(960, 0),
+        m_buttonAndLineEditBoxEndPos : cc.v2(0, 0),
+        m_loadingLabelBeginPos : cc.v2(0, 800),
+        m_loadingLabelEndPos : cc.v2(0, 0),
         m_loadTime : 1,
         m_currentPlayerPicIndex : 0,
     },
@@ -36,6 +42,8 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
+        //初始化loading
+        this.m_loadingLabel.node.setPosition(this.m_loadingLabelBeginPos);
         //初始化左侧立绘
         this.m_playerPic.spriteFrame.setTexture(this.m_allPlayerPicsVec[this.m_currentPlayerPicIndex]);
         //左侧立绘动画
@@ -46,6 +54,10 @@ cc.Class({
         this.m_playerInfo.node.setPosition(this.m_playerInfoBeginPos);
         var playerInfoMoveAct = cc.moveTo(this.m_loadTime / 2, this.m_playerInfoEndPos);
         this.m_playerInfo.node.runAction(playerInfoMoveAct);
+        //右侧按钮动画
+        this.m_buttonAndLineEditBox.setPosition(this.m_buttonAndLineEditBoxBeginPos);
+        var buttonAndLineEditBoxMoveAct = cc.moveTo(this.m_loadTime / 2, this.m_buttonAndLineEditBoxEndPos);
+        this.m_buttonAndLineEditBox.runAction(buttonAndLineEditBoxMoveAct);
         //初始化json数据
         var json = this.m_json.json;
         var playerJsonVec = json.player;
@@ -140,6 +152,22 @@ cc.Class({
         Global.PLAYER_MAXHP = 10;
         Global.PLAYER_MAXMP = 1;
         //转场
+        //左侧立绘动画
+        this.m_playerPic.node.setPosition(this.m_playerPicEndPos);
+        var playerPicMoveAct = cc.moveTo(this.m_loadTime / 2, this.m_playerPicBeginPos);
+        this.m_playerPic.node.runAction(playerPicMoveAct);
+        //右侧info动画
+        this.m_playerInfo.node.setPosition(this.m_playerInfoEndPos);
+        var playerInfoMoveAct = cc.moveTo(this.m_loadTime / 2, this.m_playerInfoBeginPos);
+        this.m_playerInfo.node.runAction(playerInfoMoveAct);
+        //右侧按钮动画
+        this.m_buttonAndLineEditBox.setPosition(this.m_buttonAndLineEditBoxEndPos);
+        var buttonAndLineEditBoxMoveAct = cc.moveTo(this.m_loadTime / 2, this.m_buttonAndLineEditBoxBeginPos);
+        this.m_buttonAndLineEditBox.runAction(buttonAndLineEditBoxMoveAct);
+        //loading
+        this.m_loadingLabel.node.setPosition(this.m_loadingLabelBeginPos);
+        var loadingMoveAct = cc.moveTo(this.m_loadTime / 2, this.m_loadingLabelEndPos);
+        this.m_loadingLabel.node.runAction(loadingMoveAct);
         cc.director.loadScene("Main");
     },
     start () {

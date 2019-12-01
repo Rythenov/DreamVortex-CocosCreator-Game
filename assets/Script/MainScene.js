@@ -29,6 +29,9 @@ cc.Class({
 
     onLoad () {
         this.node.on(cc.Node.EventType.TOUCH_MOVE, this.onTouchMoveCallback, this);
+        this.m_attackBtn.node.on(cc.Node.EventType.TOUCH_MOVE, this.onTouchMoveCallback, this);
+        this.m_cardBtn.node.on(cc.Node.EventType.TOUCH_MOVE, this.onTouchMoveCallback, this);
+        this.m_shopBtn.node.on(cc.Node.EventType.TOUCH_MOVE, this.onTouchMoveCallback, this);
         var backgroundSize = this.m_backgroundSprite.node.getContentSize();
         var canvasSize = this.node.getContentSize();
         this.m_backgroundMinX = 0 - backgroundSize.width / 2 + canvasSize.width / 2;
