@@ -1,0 +1,34 @@
+{
+  "ver": "2.3.3",
+  "uuid": "aacb50ac-a5cf-47da-a223-2880fb0d595c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "platformSettings": {},
+  "subMetas": {
+    "ApkQR": {
+      "ver": "1.0.4",
+      "uuid": "fe24f708-31eb-419a-a4dc-56c39828fa46",
+      "rawTextureUuid": "aacb50ac-a5cf-47da-a223-2880fb0d595c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 280,
+      "height": 280,
+      "rawWidth": 280,
+      "rawHeight": 280,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
